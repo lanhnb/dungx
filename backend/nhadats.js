@@ -1,0 +1,15 @@
+const nhadats = [
+    
+    {"id":"thapaserialnoe","named":"Mac Pc","companyx":"apple","salaryx":4000099,"colorsx":["#000","#CDD0D0"],"imagex":"https://images.pexels.com/photos/4224099/pexels-photo-4224099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","descriptiond":"The Computer is y c","categoryd":"computer","shipping":true},
+    {"id":"thapaserialnof","named":"Macbook Pro","companyx":"apple","salaryx":42999,"colorsx":["#000000","#CDD0D0"],"imagex":"https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","descriptiond":"The Laptop on it.","categoryd":"laptop","shipping":true},
+    {"id":"thapaserialnog","named":"Asus gseries","companyx":"asus","salaryx":23999,"colorsx":["#CDD0D0","#000"],"imagex":"https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","descriptiond":"The laptop is  on it.","categoryd":"laptop","shipping":true},
+    {"id":"thapaserialnog","named":"Asus gseries","companyx":"asus","salaryx":23999,"colorsx":["#CDD0D0","#000"],"imagex":"https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","descriptiond":"The laptop is  on it.","categoryd":"laptop","shipping":true},
+    {"id":"thapaserialnog","named":"Asus gseries","companyx":"asus","salaryx":23999,"colorsx":["#CDD0D0","#000"],"imagex":"https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","descriptiond":"The laptop is  on it.","categoryd":"laptop","shipping":true},
+    {"id":"thapaserialnog","named":"Asus gseries","companyx":"asus","salaryx":23999,"colorsx":["#CDD0D0","#000"],"imagex":"https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","descriptiond":"The laptop is  on it.","categoryd":"laptop","shipping":true},
+    {"id":"thapaserialnog","named":"Asus gseries","companyx":"asus","salaryx":23999,"colorsx":["#CDD0D0","#000"],"imagex":"https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","descriptiond":"The laptop is  on it.","categoryd":"laptop","shipping":true},
+    {"id":"thapaserialnog","named":"Asus gseries","companyx":"asus","salaryx":23999,"colorsx":["#CDD0D0","#000"],"imagex":"https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","descriptiond":"The laptop is  on it.","categoryd":"laptop","shipping":true},
+    {"id":"thapaserialnog","named":"Asus gseries","companyx":"asus","salaryx":23999,"colorsx":["#CDD0D0","#000"],"imagex":"https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","descriptionx":"The laptop is  on it.","categoryd":"laptop","shipping":true},
+  ];
+  
+  module.exports = nhadats;
+  
