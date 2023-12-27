@@ -61,7 +61,7 @@ import Foots from "./components/foot";
 import Productss from './components/Products';
 import CheckoutSuccess from "./components/payment/CheckOutSucces";
 import ShippingAddressScreen from "./components/payment/ShipingAdressScreen"
-import MapScreen from './components/payment/MapScreen';
+
 import PaymentMethodScreen from './components/payment/PaymentMethodScreen';
 import PlaceOrderScreen from './components/payment/PlaceOrderScreen';
 
@@ -160,7 +160,7 @@ const App = () => {
           <Route path="/shipping" element={<ShippingAddressScreen />}
           ></Route>
 
-          <Route path="/map" element={<MapScreen />}></Route>
+         
           <Route path="/payment" element={<PaymentMethodScreen />}></Route>
           <Route path="/placeorder" element={<PlaceOrderScreen />} />
           <Route path="/order/:id" element={<OrderScreen />}></Route>
