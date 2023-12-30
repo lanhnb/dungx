@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Map from "./map"
+
 import { useState } from "react";
 import { toast } from 'react-toastify';
 import axios from 'axios';

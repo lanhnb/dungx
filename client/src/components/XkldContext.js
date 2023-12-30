@@ -3,8 +3,7 @@ import axios from "axios";
 import  reducer  from "./ProductReducer";
 
 
-
-const API = "http://localhost:5000/api/nhadats";
+const API = "http://localhost:8000/api/xklds";
  
 
 const AppContext = createContext();
@@ -12,36 +11,36 @@ const AppContext = createContext();
 const initialState ={
     isLoading: false,
     isError: false,
-    nhadats:[],
+    xklds:[],
     isSingleLoading: false,
-    singleNhadat:{},
+    singleXkld:{},
 }
 
 const AppProvider = ({children})=>{
 
     const [state, dispatch] = useReducer(reducer, initialState)
 
-    const getNhadats = async (url)=>{
+    const getXklds = async (url)=>{
         dispatch({type:"SET_LOADING"})
         try{
         const res = await axios.get(url);
-        const nhadats = await res.data;
+        const xklds = await res.data;
        
        
-        dispatch({type:"SET_API_DATA", payload:nhadats});
+        dispatch({type:"SET_API_DATA", payload:xklds});
         }catch(error){
             dispatch({type:"API_ERROR"})
         }
 
     };
     // my 2nd api call for single product
-    const getSingleNhadat = async (url)=>{
+    const getSingleXkld = async (url)=>{
         dispatch({type:"SET_SINGLE_LOADING"})
         try {
             const res = await axios.get(url);
-            const singleNhadat = await res.data;
+            const singleXkld = await res.data;
             
-            dispatch({type:"SET_SINGLE_PRODUCT", payload:singleNhadat});
+            dispatch({type:"SET_SINGLE_PRODUCT", payload:singleXkld});
             
         } catch (error) {
             dispatch({type:"SET_SINGLE_ERROR"})
@@ -50,16 +49,16 @@ const AppProvider = ({children})=>{
     }
    
     useEffect(()=>{
-        getNhadats(API);
+        getXklds(API);
     },[]);
 
-    return <AppContext.Provider value={{...state, getSingleNhadat}}>
+    return <AppContext.Provider value={{...state, getSingleXkld}}>
         {children}
         </AppContext.Provider>
 };
 
 //custom hooks
-const useNhadatContext = ()=>{
+const useXkldContext = ()=>{
     return useContext(AppContext)
 }
-export {AppProvider, AppContext, useNhadatContext}
+export {AppProvider, AppContext, useXkldContext}

@@ -1,71 +1,65 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import  reducer  from "./ProductReducer";
-import { useParams } from "react-router-dom";
-// import { url } from "./api";
 
 
-const API = "http://localhost:5000/api/products";
- const API1 = "https://api.pujakaitem.com/api/products";
+
+const API = "http://localhost:8000/api/nhadats";
+ 
 
 const AppContext = createContext();
 
 const initialState ={
     isLoading: false,
     isError: false,
-    products:[],
-    featureProducts:[],
+    nhadats:[],
     isSingleLoading: false,
-    singleProduct:{},
+    singleNhadat:{},
 }
 
 const AppProvider = ({children})=>{
 
     const [state, dispatch] = useReducer(reducer, initialState)
 
-    const getProducts = async (url)=>{
+    const getNhadats = async (url)=>{
         dispatch({type:"SET_LOADING"})
         try{
         const res = await axios.get(url);
-        const products = await res.data;
+        const nhadats = await res.data;
        
        
-        dispatch({type:"SET_API_DATA", payload:products});
+        dispatch({type:"SET_API_DATA", payload:nhadats});
         }catch(error){
             dispatch({type:"API_ERROR"})
         }
 
     };
     // my 2nd api call for single product
-    const getSingleProduct = async (url)=>{
+    const getSingleNhadat = async (url)=>{
         dispatch({type:"SET_SINGLE_LOADING"})
         try {
             const res = await axios.get(url);
-            const singleProduct = await res.data;
+            const singleNhadat = await res.data;
             
-            dispatch({type:"SET_SINGLE_PRODUCT", payload:singleProduct});
+            dispatch({type:"SET_SINGLE_PRODUCT", payload:singleNhadat});
             
         } catch (error) {
             dispatch({type:"SET_SINGLE_ERROR"})
             
         }
     }
-    // const {id} = useParams();
-    // useEffect(()=>{
-    //     getSingleProduct(`${API}?id=${id}`);
-    // }, []);
-
+   
     useEffect(()=>{
-        getProducts(API);
+        getNhadats(API);
     },[]);
 
-    return <AppContext.Provider value={{...state, getSingleProduct}}>
+    return <AppContext.Provider value={{...state, getSingleNhadat}}>
         {children}
         </AppContext.Provider>
 };
 
 //custom hooks
-const useProductContext = ()=>{
+const useNhadatContext = ()=>{
     return useContext(AppContext)
 }
-export {AppProvider, AppContext, useProductContext}
+export {AppProvider, AppContext, useNhadatContext}
